@@ -1,4 +1,11 @@
-# Portafolio_Datos_1
- Recopilacion de Datos
+# Portafolio de Datos I
+
+Valeria Morales A
  
-Algoritmos y estructuras de Datos 1
+Curso: Algoritmos y Estructuras de Datos I
+
+Ingeniería en Computadores
+
+Tecnológico de Costa Rica
+
+En este repositorio se encuentran toda la materia, prácticas y archivos vistos en clase durante en segundo semestre 2019.
