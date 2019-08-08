@@ -2,9 +2,7 @@ package Tarea1;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+import java.io.*;
 import java.util.Arrays;
 
 
@@ -13,7 +11,7 @@ public class VentanaPrincipal extends JFrame {
     //Ventana que debe contener una tabla donde se pueda seleccionar un CSV
     // Archivo CSV: permite compartir datos de forma tabular, filas y columnas
 
-    private VentanaPrincipal(){
+    private VentanaPrincipal() {
 
         super("Tabla"); //titulo de la tabla
         DefaultTableModel modelo = new DefaultTableModel();
@@ -23,9 +21,9 @@ public class VentanaPrincipal extends JFrame {
 
         JTable tabla = new JTable(modelo);
         JScrollPane scroll1 = new JScrollPane();
-        tabla.setBounds(12,22,750,700);
-        setSize(750,700);
-        scroll1.setBounds(12,22,750,700);
+        tabla.setBounds(12, 22, 750, 700);
+        setSize(750, 700);
+        scroll1.setBounds(12, 22, 750, 700);
         scroll1.setViewportView(tabla);
         add(scroll1);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -33,7 +31,6 @@ public class VentanaPrincipal extends JFrame {
         setVisible(true);
 
         String linea = "";
-
 
         try {
 
@@ -44,9 +41,8 @@ public class VentanaPrincipal extends JFrame {
             BufferedReader br = new BufferedReader(lector);
             int n = 0;
             int i = 0;
-            int ii= 0;
+            int ii = 0;
             String separacion = ",";
-
 
             while (br.ready()) {
 
@@ -55,7 +51,7 @@ public class VentanaPrincipal extends JFrame {
                     while (n == 0) {
                         System.out.println("Se añadio la primera columna");
                         String[] columnparts = linea.split(",");
-                        while (i < columnparts.length){
+                        while (i < columnparts.length) {
                             modelo.addColumn(columnparts[i]);
                             i++;
                         }
@@ -68,16 +64,28 @@ public class VentanaPrincipal extends JFrame {
                     System.out.println("Part es: " + Arrays.toString(parts));
 
                     modelo.addRow(parts);
-
                 }
-
             }
-        } catch (Exception ex) {
 
+        } catch (FileNotFoundException e) {
+            JFrame frame = new JFrame("Exception / Error");
+            JOptionPane.showMessageDialog(frame, "No se encontró ningún archivo a mostrar \n" + e);
+            System.exit(0);
+
+        } catch (IOException e) {
+            JFrame frame = new JFrame("Exception / Error");
+            JOptionPane.showMessageDialog(frame, "Ocurrió un Error: \n" + e);
+            System.exit(0);
+
+        } catch (RuntimeException e) {
+            JFrame frame = new JFrame("Exception / Error");
+            JOptionPane.showMessageDialog(frame, "Tiempo de espera agotado \n" + e);
+            System.exit(0);
         }
     }
 
     public static void main(String[] args) {
+
         VentanaPrincipal t1 = new VentanaPrincipal();
     }
 }
