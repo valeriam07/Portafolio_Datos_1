@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ca7e110-f784-492b-9a7f-af0889992ab2" name="Default Changelist" comment="" />
+    <list default="true" id="2ca7e110-f784-492b-9a7f-af0889992ab2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +19,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Tarea2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -123,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565303707718</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Tarea #1 con excepciones">
+      <created>1565303853273</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1565303853273</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,6 +154,7 @@
     <MESSAGE value="ventana principal" />
     <MESSAGE value="Ejemplo usando Throw, Try y Finally" />
     <MESSAGE value="Ejemplo de como crear una excepción" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ejemplo de como crear una excepción" />
+    <MESSAGE value="Tarea #1 con excepciones" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tarea #1 con excepciones" />
   </component>
 </project>
